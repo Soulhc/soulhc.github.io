@@ -174,20 +174,14 @@
 <li>没有索引</li>
 </ol>
 <p>LinkedHashSet继承与HashSet  数据结构为（数组+链表/红黑树+链表）  特点：有序  存入什么数据，拿出来即什么数据。  主要多加了一个链表来记录集合中的顺序。</p>
-<h6 id="Collections工具类下边的记个方法"><a href="#Collections工具类下边的记个方法" class="headerlink" title="Collections工具类下边的记个方法"></a>Collections工具类下边的记个方法</h6><ol>
-<li><p>addAll(list，参数)  第一个参数为集合，第二个参数为集合中所添加的数据。 第二个参数为（可变参数），可以根据自己的需要任意添加。</p>
-</li>
-<li><p>Shuffle 打乱集合的数据，即存入 1 3 2 取出时有可能1，2，3 或者3,2,1等等   主要打乱顺序</p>
-</li>
-<li><p>sort()一个参数 对集合中的数据进行排序。  如果集合中使用自定义的类型时需要实现Comparable接口并且实现compareTo方法才能生效，否则报错</p>
-</li>
-<li><p>sort(集合，排序规则)两个参数  排序规则new Comparator<Integer>（）{}匿名内部类，必须实现一个方法 </p>
+<h6 id="Collections工具类下边的记个方法"><a href="#Collections工具类下边的记个方法" class="headerlink" title="Collections工具类下边的记个方法"></a>Collections工具类下边的记个方法</h6><p>addAll(list，参数)  第一个参数为集合，第二个参数为集合中所添加的数据。 第二个参数为（可变参数），可以根据自己的需要任意添加。</p>
+<p>Shuffle 打乱集合的数据，即存入 1 3 2 取出时有可能1，2，3 或者3,2,1等等   主要打乱顺序</p>
+<p>sort()一个参数 对集合中的数据进行排序。  如果集合中使用自定义的类型时需要实现Comparable接口并且实现compareTo方法才能生效，否则报错</p>
+<p>sort(集合，排序规则)两个参数  排序规则new Comparator<Integer>（）{}匿名内部类，必须实现一个方法 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public int compare(Integer o1,Integer o2)&#123;</span><br><span class="line">    return o1 - o2; //升序</span><br><span class="line">    return o2 - o1; //降序</span><br><span class="line">&#125;</span><br><span class="line">Collections.sort(list,new Comparator&lt;Student&gt;()&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public int compare(Student o1,Student o2)&#123;</span><br><span class="line">        int result =  return o1.age - o2.age; //升序  按照年龄排序，如何年龄相同按照名字首字母排序</span><br><span class="line">        if(result == 0)&#123;</span><br><span class="line">            result = o1.getName().charAt(0) - o2.getName().charAt(0);</span><br><span class="line">        &#125;</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
 
-</li>
-</ol>
 <p>hashCode</p>
 <p>哈希值:是一个十进制的整数，有系统随机给出(就是对象的地址值，是一个逻辑地址,是模拟出来的地址，不是实际存储的物理地址）<br>int hashCode()返回该对象的哈希码值。<br>hashCode方法的源码：<br>　public native int hashCode();<br>　native:代表该方法调用的是本地操作系统的方法<br>　哈希表：初始值为16个<br>　两个元素不同，但哈希值相同。成为哈希冲突<br>jdk1.8之前：哈希表=数组+链表<br>jdk1.8之后：哈希表=数组+链表；    </p>
 <p>哈希表=数组+红黑树（提高查询效率）  如果链表的长度超过8个之后则自动转为红黑树结构(折半查 找)<br>实现Comparable接口，重写比较的规则compareTo方法<br>　如果return this.age - o.age;为升序排序；<br>　return o.age - this.age;为降序排序；</p>
