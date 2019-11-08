@@ -197,13 +197,9 @@
 </ol>
 <p>java.util.HashMap&lt;k,v&gt;结合 implements Map&lt;k,v&gt;接口</p>
 <h6 id="HashMap集合的特点："><a href="#HashMap集合的特点：" class="headerlink" title="HashMap集合的特点："></a>HashMap集合的特点：</h6><ol>
-<li><p>HashMap集合底层是哈希表：查询的速度特别的快</p>
-<pre><code> JDK1.8之前：数组+单向链表
-JDK1.8值后：数组+单向链表/红黑树（链表的长度超过8即自动为红黑树）  提高查询的速度</code></pre></li>
-<li><p>hasMmap集合是一个无序的集合，存储元素和取出元素的顺序有可能不一致</p>
-<p>java.util.LinkedHashMap&lt;k,v&gt;集合 extends HashMap&lt;k,v&gt;集合</p>
-<p>LinkedHashMap的特点：</p>
-<ol>
+<li>HashMap集合底层是哈希表：查询的速度特别的快<pre><code>JDK1.8之前：数组+单向链表
+   JDK1.8值后：数组+单向链表/红黑树（链表的长度超过8即自动为红黑树）  提高查询的速度</code></pre></li>
+<li>hasMmap集合是一个无序的集合，存储元素和取出元素的顺序有可能不一致<br> java.util.LinkedHashMap&lt;k,v&gt;集合 extends HashMap&lt;k,v&gt;集合<br>  LinkedHashMap的特点<ol>
 <li>LinkedHashMap集合底层是哈希表+链表（保证迭代的书序）</li>
 <li>LinkedHashMap集合是一个有序的集合，存储元素和取出元素是一致的</li>
 </ol>
