@@ -141,11 +141,21 @@
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">1、Collection集合（单列集合）：集合下分为List集合和set集合
-List下主要包括  vactor  ArrayList(底层为数组：查询速度较快，增删比较慢)  LinkedList（底层为链表，查询速度较慢，增删较快） 三个特点：1  有序集合，即存入什么顺序,查询出来就什么顺序
-                                                                                                                                    2  可以存入重复元素。即：1,2,1
-                                                                                                                                    3  具有索引，可以使用for循环查询
-set下包括  TreeSet 和 HashSet（底层为Hash表，hash表由数组+链表</div>
+          <div class="index-text mb-1">Collection集合（单列集合）：集合下分为List集合和set集合list接口List下主要包括  vactor  ArrayList(底层为数组：查询速度较快，增删比较慢)  LinkedList（底层为链表，查询速度较慢，增删较快） 三个特点如下：
+
+有序集合，即存入什么顺序,查询出来就什么顺序
+可以存入重复元素。即：1,2,1
+具有索引，可以使用for循环
+
+set接口set下包括  TreeSet 和 HashSet（底层为Hash表，hash表由数组+链表/红黑树组成，查询速度超快）使用时，存入的类型必须重写了HashCode和equals方法，否则会存入相同的数据。  三个特点如下：
+
+不可以存入重复元素
+无序  存入的数据查询出来时有可能相同，也有可能不同
+没有索引
+
+LinkedHashSet继承与HashSet  数据结构为（数组+链表/红黑树+链表）  特点：有序  存入什么数据，拿出来即什么数据。  主要多加了一个链表来记录集合中的顺序。
+Collections工具类下边的记个方法
+addAll(list，参数)  第一个参数为集合，第二个参数为集合中所添加</div>
         </div>
       </a>
 
