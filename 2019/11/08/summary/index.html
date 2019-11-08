@@ -186,8 +186,7 @@
 
 </li>
 </ol>
-<h6 id="hashCode"><a href="#hashCode" class="headerlink" title="hashCode"></a>hashCode</h6><p>哈希值:是一个十进制的整数，有系统随机给出(就是对象的地址值，是一个逻辑地址,是模拟出来的地址，不是实际存储的物理地址）<br>int hashCode()返回该对象的哈希码值。<br>hashCode方法的源码：<br>    public native int hashCode();<br>    native:代表该方法调用的是本地操作系统的方法<br>    哈希表：初始值为16个<br>    两个元素不同，但哈希值相同。成为哈希冲突</p>
-<p>jdk1.8之前：哈希表=数组+链表<br>jdk1.8之后：哈希表=数组+链表；</p>
+<h6 id="hashCode"><a href="#hashCode" class="headerlink" title="hashCode"></a>hashCode</h6><p>哈希值:是一个十进制的整数，有系统随机给出(就是对象的地址值，是一个逻辑地址,是模拟出来的地址，不是实际存储的物理地址）<br>int hashCode()返回该对象的哈希码值。<br>hashCode方法的源码：<br>    public native int hashCode();<br>    native:代表该方法调用的是本地操作系统的方法<br>    哈希表：初始值为16个<br>    两个元素不同，但哈希值相同。成为哈希冲突<br>jdk1.8之前：哈希表=数组+链表<br>jdk1.8之后：哈希表=数组+链表；</p>
 <p>哈希表=数组+红黑树（提高查询效率）  如果链表的长度超过8个之后则自动转为红黑树结构(折半查 找)<br>实现Comparable接口，重写比较的规则compareTo方法<br>    如果return this.age - o.age;为升序排序；<br>    return o.age - this.age;为降序排序；</p>
 <h5 id="Map集合（双列集合）："><a href="#Map集合（双列集合）：" class="headerlink" title="Map集合（双列集合）："></a>Map集合（双列集合）：</h5><h6 id="Map集合特点："><a href="#Map集合特点：" class="headerlink" title="Map集合特点："></a>Map集合特点：</h6><ol>
 <li>Map集合是一个双列集合，一个元素包含两个值（一个key,一个value）</li>
