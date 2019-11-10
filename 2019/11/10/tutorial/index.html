@@ -15,7 +15,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>梁木</title>
+  <title>软件安装教程 ~ 梁木</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -36,7 +36,7 @@
 
 
 <body>
-  <header style="height: 100vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -107,12 +107,43 @@
             </span>
 
             
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  Sunday, November 10th 2019, 3:47 pm
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    368 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      1 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
           </div>
 
-          
-            <div class="scroll-down-bar">
-              <i class="fas fa-angle-down scroll-down-arrow"></i>
-            </div>
           
         </div>
       </div>
@@ -121,149 +152,81 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h3 id="搭建服务器访问外网"><a href="#搭建服务器访问外网" class="headerlink" title="搭建服务器访问外网"></a>搭建服务器访问外网</h3><h6 id="系统要求："><a href="#系统要求：" class="headerlink" title="系统要求："></a>系统要求：</h6><p>　　CentOs7+、Debian8+、Ubuntu16+</p>
+<h6 id="环境要求："><a href="#环境要求：" class="headerlink" title="环境要求："></a>环境要求：</h6><p>要求系统中有curl,建议提前安装，安装命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># CentOS：</span><br><span class="line">yum update -y &amp;&amp; yum install curl -y</span><br><span class="line"></span><br><span class="line"># Debian/Ubuntu：</span><br><span class="line">apt-get update -y &amp;&amp; apt-get install curl -y</span><br></pre></td></tr></table></figure>
 
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/11/10/tutorial/">
-        <p class="h4 index-header">软件安装教程</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">搭建服务器访问外网系统要求：　　CentOs7+、Debian8+、Ubuntu16+
-环境要求：要求系统中有curl,建议提前安装，安装命令：
-12345# CentOS：yum update -y &amp;&amp; yum install curl -y# Debian/Ubuntu：apt-get update -y &amp;&amp; apt-get install curl -y
+<h6 id="233版V2ray一键安装流程"><a href="#233版V2ray一键安装流程" class="headerlink" title="233版V2ray一键安装流程"></a>233版V2ray一键安装流程</h6><p>Putty连接服务器，复制以下命令运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://git.io/v2ray.sh)</span><br></pre></td></tr></table></figure>
 
-233版V2ray一键安装流程Putty连接服务器，复制以下命令运行：
-1bash &lt;(curl -s -L https://git.io/v2ray.sh)
+<p>剩下的就是根据自己所要选择</p>
+<h6 id="如何安装BBR-锐速"><a href="#如何安装BBR-锐速" class="headerlink" title="如何安装BBR/锐速"></a>如何安装BBR/锐速</h6><p>如果你的服务器系统，还没有安装BBR/锐速，那么利用脚本自带功能进行安装，成功安装之后，可以网络加速提高用户体验。</p>
+<p>具体方法</p>
+<ol>
+<li><p>Putty连接VPS服务器，输入一下命令行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v2ray bbr</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>出现下图界面时，输入数字1安装BBR,或者输入数字2安装锐速：</p>
+<p>注意：BBR和锐速不建议同时安装，二选一即可。（当时选的锐速即2）</p>
+</li>
+</ol>
+<h6 id="安卓手机使用v2ray"><a href="#安卓手机使用v2ray" class="headerlink" title="安卓手机使用v2ray"></a>安卓手机使用v2ray</h6><ol>
+<li><p>下载v2rayNG到安卓机</p>
+<p>github地址：<a href="https://github.com/2dust/v2rayNG/releases" target="_blank" rel="noopener">https://github.com/2dust/v2rayNG/releases</a></p>
+</li>
+<li><p>扫描二维码导入服务器信息</p>
+</li>
+<li><p>配置设置分应用代理（即选择你所需要访问外网的app代理即可）</p>
+</li>
+<li><p>路由模式：绕过大陆地址</p>
+<h6 id="至此已成功安装手机即可使用（总结：当安装完使用时网速超级慢，可以重新启动手机即可恢复正常网速）此时下载一个APKPure就可以从上边下载你想要的App来使用了"><a href="#至此已成功安装手机即可使用（总结：当安装完使用时网速超级慢，可以重新启动手机即可恢复正常网速）此时下载一个APKPure就可以从上边下载你想要的App来使用了" class="headerlink" title="至此已成功安装手机即可使用（总结：当安装完使用时网速超级慢，可以重新启动手机即可恢复正常网速）此时下载一个APKPure就可以从上边下载你想要的App来使用了"></a>至此已成功安装手机即可使用（总结：当安装完使用时网速超级慢，可以重新启动手机即可恢复正常网速）此时下载一个APKPure就可以从上边下载你想要的App来使用了</h6></li>
+</ol>
 
-剩下的就是根据自己所要选择
-如何安装BBR/锐速如果你的服务器系统，还没有安装BBR/锐速，那么利用脚本自带功能进行安装，成功安装之后，可以网络加速提高用户体验。
-具体方法
-
-Putty连接VPS服务器，输入一下命令行：
-1v2ray bbr
-
-出现下图界面时，输入数字1安装BBR,或者输入数字2安装锐速：
-注意：BBR和锐速不建议同时安装，二选一即可。（当时选的锐速即2）
-
-
-安卓手机使用v2ray
-下载v2rayNG到安卓</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-11-10&nbsp;&nbsp;
-        
-        
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/11/08/summary/">
-        <p class="h4 index-header">java知识点随记</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">Collection集合（单列集合）：集合下分为List集合和set集合list接口List下主要包括  vactor  ArrayList(底层为数组：查询速度较快，增删比较慢)  LinkedList（底层为链表，查询速度较慢，增删较快） 三个特点如下：
-
-有序集合，即存入什么顺序,查询出来就什么顺序
-可以存入重复元素。即：1,2,1
-具有索引，可以使用for循环
-
-set接口set下包括  TreeSet 和 HashSet（底层为Hash表，hash表由数组+链表/红黑树组成，查询速度超快）使用时，存入的类型必须重写了HashCode和equals方法，否则会存入相同的数据。  三个特点如下：
-
-不可以存入重复元素
-无序  存入的数据查询出来时有可能相同，也有可能不同
-没有索引
-
-LinkedHashSet继承与HashSet  数据结构为（数组+链表/红黑树+链表）  特点：有序  存入什么数据，拿出来即什么数据。  主要多加了一个链表来记录集合中的顺序。
-Collections工具类下边的记个方法addAll(list，参数)  第一个参数为集合，第二个参数为集合中所添加的</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-11-08&nbsp;&nbsp;
-        
-        
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/11/07/my-first-blog/">
-        <p class="h4 index-header">长记英语单词</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">application 应用程式 应用、应用程序
-application framework 应用程式框架、应用框架 应用程序框架
-architecture 架构、系统架构 体系结构
-argument 引数（传给函式的值）。叁见 parameter 叁数、实质叁数、实叁、自变量
-array 阵列 数组
-arrow operator arrow（箭头）运算子 箭头操作符
-assembly 装配件
-assembly language 组合语言 汇编语言
-assert(ion) 断言
-assign 指派、指定、设值、赋值 赋值
-assignment 指派、指定 赋值、分配
-assignment operator 指派（赋值）运算子 = 赋值操作符
-associated 相应的、相关的 相关的、关联、相应的
-associative container 关联式容器（对应 sequential container） 关联式容器
-atomic 不可分割的 原子的
-attribute 属性 属性、特性
-audio 音讯 音频
-A.I. 人工智慧 人工智能
-background 背景 背景（用於图形着色</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-11-07&nbsp;&nbsp;
-        
-        
-        
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-              </div>
-            </div>
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -338,6 +301,11 @@ background 背景 背景（用於图形着色</div>
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
 
   <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
@@ -378,7 +346,7 @@ background 背景 背景（用於图形着色</div>
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "&nbsp;",
+        "软件安装教程&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

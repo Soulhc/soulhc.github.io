@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>软件安装教程</title>
+    <link href="undefined2019/11/10/tutorial/"/>
+    <url>2019/11/10/tutorial/</url>
+    
+    <content type="html"><![CDATA[<h3 id="搭建服务器访问外网"><a href="#搭建服务器访问外网" class="headerlink" title="搭建服务器访问外网"></a>搭建服务器访问外网</h3><h6 id="系统要求："><a href="#系统要求：" class="headerlink" title="系统要求："></a>系统要求：</h6><p>　　CentOs7+、Debian8+、Ubuntu16+</p><h6 id="环境要求："><a href="#环境要求：" class="headerlink" title="环境要求："></a>环境要求：</h6><p>要求系统中有curl,建议提前安装，安装命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># CentOS：</span><br><span class="line">yum update -y &amp;&amp; yum install curl -y</span><br><span class="line"></span><br><span class="line"># Debian/Ubuntu：</span><br><span class="line">apt-get update -y &amp;&amp; apt-get install curl -y</span><br></pre></td></tr></table></figure><h6 id="233版V2ray一键安装流程"><a href="#233版V2ray一键安装流程" class="headerlink" title="233版V2ray一键安装流程"></a>233版V2ray一键安装流程</h6><p>Putty连接服务器，复制以下命令运行：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://git.io/v2ray.sh)</span><br></pre></td></tr></table></figure><p>剩下的就是根据自己所要选择</p><h6 id="如何安装BBR-锐速"><a href="#如何安装BBR-锐速" class="headerlink" title="如何安装BBR/锐速"></a>如何安装BBR/锐速</h6><p>如果你的服务器系统，还没有安装BBR/锐速，那么利用脚本自带功能进行安装，成功安装之后，可以网络加速提高用户体验。</p><p>具体方法</p><ol><li><p>Putty连接VPS服务器，输入一下命令行：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v2ray bbr</span><br></pre></td></tr></table></figure></li><li><p>出现下图界面时，输入数字1安装BBR,或者输入数字2安装锐速：</p><p>注意：BBR和锐速不建议同时安装，二选一即可。（当时选的锐速即2）</p></li></ol><h6 id="安卓手机使用v2ray"><a href="#安卓手机使用v2ray" class="headerlink" title="安卓手机使用v2ray"></a>安卓手机使用v2ray</h6><ol><li><p>下载v2rayNG到安卓机</p><p>github地址：<a href="https://github.com/2dust/v2rayNG/releases" target="_blank" rel="noopener">https://github.com/2dust/v2rayNG/releases</a></p></li><li><p>扫描二维码导入服务器信息</p></li><li><p>配置设置分应用代理（即选择你所需要访问外网的app代理即可）</p></li><li><p>路由模式：绕过大陆地址</p><h6 id="至此已成功安装手机即可使用（总结：当安装完使用时网速超级慢，可以重新启动手机即可恢复正常网速）此时下载一个APKPure就可以从上边下载你想要的App来使用了"><a href="#至此已成功安装手机即可使用（总结：当安装完使用时网速超级慢，可以重新启动手机即可恢复正常网速）此时下载一个APKPure就可以从上边下载你想要的App来使用了" class="headerlink" title="至此已成功安装手机即可使用（总结：当安装完使用时网速超级慢，可以重新启动手机即可恢复正常网速）此时下载一个APKPure就可以从上边下载你想要的App来使用了"></a>至此已成功安装手机即可使用（总结：当安装完使用时网速超级慢，可以重新启动手机即可恢复正常网速）此时下载一个APKPure就可以从上边下载你想要的App来使用了</h6></li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>java知识点随记</title>
     <link href="undefined2019/11/08/summary/"/>
     <url>2019/11/08/summary/</url>
